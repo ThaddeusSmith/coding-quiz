@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pop Quiz Time Kiddies</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  
+  
+  <body>
+    <span id="count">60</span> <span id="text">seconds</span>
+
+    <button onclick="startQuizButton()">Start Clock</button>
+    
+    
+    <script>
+    function startQuizButton(){
+      var counter = 60;
+      setInterval(function() {
+        counter--;
+        if (counter >= 0) {
+          span = document.getElementById("count");
+          span.innerHTML = counter;
+        }
+        if (counter === 0) {
+            alert('sorry, out of time');
+            clearInterval(counter);
+        }
+      }, 1000);
+        
+    };
+    </script>
+    <div class="wrapper">
+      <header>
+        <h1>Pop Quiz Time Kiddies</h1>
+        <div class="card">
+    </div>
+      </header>
+    </div>
+        <div id="quiz"></div>
+        <button id="submit">Get Results</button>
+        <div id="results"></div>
+    <div>
+      <div id="startQuiz"></div>
+      <button id="startQuizButton"> Start Quiz</button>
+      <div id="quizQuestions"></div>
+    <script src="script.js"></script>
+  </body>
+
+  
+
+</html>     
